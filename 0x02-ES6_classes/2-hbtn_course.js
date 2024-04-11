@@ -6,7 +6,7 @@ export default class HolbertonCourse {
 
     // Verify data types
     if (typeof this._name !== 'string' || typeof this._length !== 'number' || !Array.isArray(this._students)) {
-      throw new Error('Invalid attribute type');
+      throw new TypeError('Invalid attribute type');
     }
   }
 
@@ -19,7 +19,7 @@ export default class HolbertonCourse {
     if (typeof newName === 'string') {
       this._name = newName;
     } else {
-      throw new Error('Name must be a string');
+      throw new TypeError('Name must be a string');
     }
   }
 
@@ -32,7 +32,7 @@ export default class HolbertonCourse {
     if (typeof newLen === 'number') {
       this._length = newLen;
     } else {
-      throw new Error('Length must be a number');
+      throw new TypeError('Length must be a number');
     }
   }
 
@@ -45,7 +45,7 @@ export default class HolbertonCourse {
     if (Array.isArray(newStudents)) {
       this._students = newStudents;
     } else {
-      throw new Error('Students must be an array');
+      throw new TypeError('Students must be an array');
     }
   }
 }
